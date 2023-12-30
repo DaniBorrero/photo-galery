@@ -121,9 +121,6 @@ input {
     border: 1px solid #caff42;
 }
 
-.grid-container {
-    display: grid;
-}
 
 input:focus {
     outline: none;
@@ -183,7 +180,7 @@ input:focus {
         justify-content: start;
         align-items: center;
         grid-area: a;
-        width: 40%;
+        width: 20%;
     }
 
     .test {
@@ -194,8 +191,12 @@ input:focus {
 
     .main {
         display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
         grid-area: b;
-        
+        height: 100vh;
+        width: 70vw;
 
     }
 
@@ -206,12 +207,13 @@ input:focus {
 
     .grid-container {
         display: grid;
+        grid-template-columns: auto;
         grid-template-areas: 
         "a b b"
         "a b b"
-        "c c c";
- 
+        "a c c";
     }
+    
 }
 
 @media (max-width: 600px) {
